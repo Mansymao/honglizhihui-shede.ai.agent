@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>鸿利智汇集团股份有限公司 - 2026年度奖补项目申报清单</title>
+    <style>
+        :root {
+            --primary: #1a3a5c;
+            --primary-light: #2d5f8a;
+            --accent: #e8943a;
+            --accent-light: #f5b971;
+            --bg: #f4f6f9;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+            --text-light: #6c7a89;
+            --border: #dce3ec;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --info: #3498db;
+            --danger: #e74c3c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* ===== Header (Sticky) ===== */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .header h1 span {
+            color: var(--accent-light);
+            font-weight: 400;
+            font-size: 16px;
+            margin-left: 12px;
+        }
+        .header-meta {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        /* ===== Navigation ===== */
+        .nav {
+            background: var(--primary);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            padding: 14px 22px;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            flex-shrink: 0;
+        }
+        .nav a:hover, .nav a.active {
+            color: white;
+            background: rgba(255,255,255,0.05);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ===== Container ===== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 40px 60px;
+        }
+
+        /* ===== Section ===== */
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 120px;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .icon {
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        /* ===== Card ===== */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 28px 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 17px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .card p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        /* ===== Info Grid ===== */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 22px 26px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+        }
+        .info-item .label {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .info-item .value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* ===== Badge ===== */
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .badge-national { background: linear-gradient(135deg, #e74c3c22, #e74c3c11); color: #c0392b; border: 1px solid #e74c3c44; }
+        .badge-province { background: linear-gradient(135deg, #3498db22, #3498db11); color: #2471a3; border: 1px solid #3498db44; }
+        .badge-city { background: linear-gradient(135deg, #27ae6022, #27ae6011); color: #1e8449; border: 1px solid #27ae6044; }
+        .badge-other { background: linear-gradient(135deg, #8e44ad22, #8e44ad11); color: #6c3483; border: 1px solid #8e44ad44; }
+
+        /* ===== Business Cards Grid ===== */
+        .biz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+        .biz-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .biz-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+        .biz-card .biz-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; margin-bottom: 14px;
+        }
+        .biz-card h4 { font-size: 16px; color: var(--primary); margin-bottom: 8px; }
+        .biz-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+        /* ===== Desktop Table ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            background: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 1600px;
+        }
+        thead th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        tbody td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        tbody tr:hover { background: #f0f5ff; }
+        tbody tr:last-child td { border-bottom: none; }
+        .level-tag {
+            display: inline-block; padding: 3px 10px; border-radius: 12px;
+            font-size: 12px; font-weight: 600; white-space: nowrap;
+        }
+        .level-national { background: #fde8e8; color: #c0392b; }
+        .level-province { background: #e8f0fe; color: #2471a3; }
+        .level-city { background: #e8f8e8; color: #1e8449; }
+        .level-district { background: #f3e8fd; color: #6c3483; }
+        .amount { font-weight: 700; color: var(--accent); font-size: 15px; }
+        .category-tag {
+            display: inline-block; padding: 2px 8px; border-radius: 4px;
+            font-size: 11px; font-weight: 500; background: #f0f0f0; color: #555;
+        }
+
+        /* ===== Tech Tags ===== */
+        .tech-tag {
+            display: inline-block; padding: 2px 7px; border-radius: 4px;
+            font-size: 11px; font-weight: 500; background: #e8f4fd; color: #2471a3;
+            margin: 1px 2px; white-space: nowrap;
+        }
+        .tech-tag.ai { background: #fde8f4; color: #c0392b; }
+        .tech-tag.hw { background: #e8fde8; color: #1e8449; }
+        .tech-tag.sw { background: #f3e8fd; color: #6c3483; }
+
+        /* ===== Mobile Card View (hidden on desktop) ===== */
+        .mobile-cards { display: none; }
+
+        .m-project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 0;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .m-project-card .m-card-header {
+            padding: 16px 18px 12px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .m-project-card .m-card-header .m-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary);
+            flex: 1;
+        }
+        .m-project-card .m-card-header .m-seq {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--accent);
+            color: white; font-size: 13px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .m-project-card .m-card-body { padding: 4px 18px 16px; }
+        .m-field {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .m-field:last-child { border-bottom: none; }
+        .m-field .m-label {
+            min-width: 80px;
+            max-width: 80px;
+            font-size: 12px;
+            color: var(--text-light);
+            font-weight: 600;
+            padding-top: 2px;
+            flex-shrink: 0;
+        }
+        .m-field .m-value {
+            flex: 1;
+            color: var(--text);
+            word-break: break-word;
+        }
+        .m-field .m-value.amount {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 16px;
+        }
+
+        /* ===== Stats Bar ===== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .stat-card .stat-num {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-card .stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* ===== Filter Buttons ===== */
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 8px 18px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: white;
+            color: var(--text);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* ===== Timeline ===== */
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before {
+            content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+            width: 3px; background: linear-gradient(to bottom, var(--accent), var(--primary));
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative; margin-bottom: 24px; padding: 18px 24px;
+            background: var(--card-bg); border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid var(--border);
+        }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -26px; top: 24px;
+            width: 14px; height: 14px; background: var(--accent);
+            border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 2px var(--accent);
+        }
+        .timeline-item .year { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+        .timeline-item h4 { font-size: 15px; color: var(--primary); margin-bottom: 6px; }
+        .timeline-item p { font-size: 13px; color: var(--text-light); }
+        .status-done { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; background: #27ae6022; color: #27ae60; font-weight: 600; }
+        .status-progress { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; background: #f39c1222; color: #f39c12; font-weight: 600; }
+
+        /* ===== Policy Links ===== */
+        .policy-ref a {
+            color: var(--info); text-decoration: none; border-bottom: 1px dashed var(--info);
+            font-size: 13px; transition: all 0.2s; word-break: break-all;
+        }
+        .policy-ref a:hover { color: var(--primary); border-bottom-style: solid; }
+        .policy-card a {
+            color: var(--info); text-decoration: none; border-bottom: 1px dashed var(--info); transition: all 0.2s;
+        }
+        .policy-card a:hover { color: var(--primary); border-bottom-style: solid; }
+        .ext-icon { display: inline-block; font-size: 10px; margin-left: 2px; opacity: 0.6; }
+
+        /* ===== Roadmap ===== */
+        .roadmap { margin-top: 24px; }
+        .roadmap-quarter {
+            display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start;
+        }
+        .roadmap-label {
+            min-width: 72px; font-size: 14px; font-weight: 700; color: var(--primary);
+            padding-top: 6px; text-align: center; background: white; border-radius: 8px;
+            padding: 8px 4px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .roadmap-items { flex: 1; display: flex; flex-wrap: wrap; gap: 8px; }
+        .roadmap-item {
+            padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 500;
+            border: 1px solid; line-height: 1.5; max-width: 280px;
+        }
+        .roadmap-item.national { background: #fde8e811; border-color: #e74c3c44; color: #c0392b; }
+        .roadmap-item.province { background: #e8f0fe11; border-color: #3498db44; color: #2471a3; }
+        .roadmap-item.city { background: #e8f8e811; border-color: #27ae6044; color: #1e8449; }
+        .roadmap-item.district { background: #f3e8fd11; border-color: #8e44ad44; color: #6c3483; }
+
+        /* ===== Unit Summary ===== */
+        .unit-summary {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px; margin-top: 20px;
+        }
+        .unit-card {
+            background: white; border-radius: 10px; padding: 18px 20px;
+            border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .unit-card .unit-name { font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .unit-card .unit-count {
+            font-size: 24px; font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .unit-card .unit-desc { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+
+        /* ===== Action Box ===== */
+        .action-box {
+            background: linear-gradient(135deg, #fff7ee, #fdf1e3);
+            border: 1px solid #f0c98b; border-left: 5px solid var(--accent);
+            border-radius: 10px; padding: 20px 24px; margin-top: 26px;
+        }
+        .action-box h4 { font-size: 15px; color: #a5670c; margin-bottom: 10px; }
+        .action-box ol { margin-left: 20px; font-size: 13.5px; color: #6b4f2a; line-height: 1.95; }
+        .action-box strong { color: #8b5a13; }
+
+        /* ===== Lifecycle Bar ===== */
+        .lifecycle-bar {
+            margin-top: 20px; padding: 20px 24px; background: #f8f9fc;
+            border-radius: 10px; border: 1px solid var(--border);
+        }
+        .lifecycle-bar h4 { font-size: 14px; color: var(--primary); margin-bottom: 16px; font-weight: 600; }
+        .lifecycle-steps { display: flex; gap: 0; position: relative; }
+        .lifecycle-step { flex: 1; text-align: center; position: relative; padding: 0 4px; }
+        .lifecycle-step .bar { height: 8px; border-radius: 4px; margin-bottom: 10px; }
+        .lifecycle-step:nth-child(1) .bar { background: #3498db; }
+        .lifecycle-step:nth-child(2) .bar { background: #9b59b6; }
+        .lifecycle-step:nth-child(3) .bar { background: #27ae60; }
+        .lifecycle-step:nth-child(4) .bar { background: #e74c3c; }
+        .lifecycle-step .step-label { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+        .lifecycle-step .step-pct {
+            font-size: 18px; font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+
+        /* ===== Contact Bar ===== */
+        .contact-bar {
+            margin-top: 20px; padding: 16px 28px; background: white;
+            border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border); display: flex;
+            align-items: center; gap: 28px; flex-wrap: wrap;
+        }
+        .contact-bar-title {
+            font-size: 14px; font-weight: 700; color: var(--primary);
+            white-space: nowrap; padding-right: 12px; border-right: 2px solid var(--border);
+        }
+        .contact-bar-name { font-size: 18px; font-weight: 800; color: var(--primary); letter-spacing: 1px; }
+        .contact-bar-info { font-size: 13px; color: var(--text); }
+        .contact-bar-info .cb-label { color: var(--text-light); margin-right: 4px; }
+        .contact-bar-info a { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 15px; }
+        .contact-bar-info a:hover { color: var(--accent); }
+        .contact-bar-sep { width: 1px; height: 28px; background: var(--border); }
+
+        /* ===== Collapse Sections ===== */
+        .collapse-group {
+            margin-top: 48px; padding-top: 32px; border-top: 2px dashed var(--border);
+        }
+        .collapse-group-title {
+            font-size: 16px; font-weight: 600; color: var(--text-light);
+            margin-bottom: 16px; text-align: center; letter-spacing: 2px;
+        }
+        .collapse-section {
+            margin-bottom: 12px; border-radius: 12px; overflow: hidden;
+            background: var(--card-bg); box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .collapse-section summary {
+            padding: 18px 28px; cursor: pointer; font-size: 16px; font-weight: 600;
+            color: var(--primary); display: flex; align-items: center; gap: 12px;
+            list-style: none; border-left: 4px solid var(--accent); transition: background 0.2s;
+        }
+        .collapse-section summary::-webkit-details-marker { display: none; }
+        .collapse-section summary:hover { background: #f8f9fc; }
+        .collapse-section summary::before {
+            content: '\25B6'; font-size: 12px; color: var(--accent);
+            transition: transform 0.3s; flex-shrink: 0;
+        }
+        .collapse-section[open] summary::before { transform: rotate(90deg); }
+        .collapse-section[open] summary { border-bottom: 1px solid var(--border); background: #f8f9fc; }
+        .collapse-section .collapse-body { padding: 24px 28px; animation: fadeSlideIn 0.3s ease; }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: var(--primary); color: rgba(255,255,255,0.7);
+            text-align: center; padding: 24px; font-size: 13px;
+        }
+
+        /* ===== Print ===== */
+        @media print {
+            .header, .nav, .filter-bar { position: static; }
+            .section { page-break-inside: avoid; }
+            .collapse-section { break-inside: avoid; }
+            .mobile-cards { display: none !important; }
+        }
+
+        /* ================================================================
+           RESPONSIVE BREAKPOINTS
+           ================================================================ */
+
+        /* ===== Tablet & Small Desktop (<=1024px) ===== */
+        @media (max-width: 1024px) {
+            .container { padding: 20px 20px 48px; }
+            .header-inner { padding: 16px 20px; flex-direction: column; gap: 6px; align-items: flex-start; }
+            .header h1 { font-size: 20px; }
+            .header h1 span { display: block; margin-left: 0; margin-top: 4px; font-size: 14px; }
+            .header-meta { font-size: 12px; }
+            .nav-inner { padding: 0 12px; }
+            .nav a { padding: 12px 16px; font-size: 13px; }
+
+            .table-wrapper { display: none; }
+            .mobile-cards { display: block; }
+
+            .section-title { font-size: 18px; }
+            .section-title .icon { width: 28px; height: 28px; font-size: 14px; }
+
+            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .stat-card { padding: 18px; }
+            .stat-card .stat-num { font-size: 28px; }
+
+            .roadmap-quarter { flex-direction: column; gap: 8px; }
+            .roadmap-label {
+                min-width: auto; text-align: left; padding: 8px 14px;
+                display: flex; gap: 8px; align-items: center;
+            }
+            .roadmap-item { max-width: 100%; }
+
+            .unit-summary { grid-template-columns: repeat(2, 1fr); }
+
+            .card { padding: 20px 22px; }
+            .collapse-section summary { padding: 16px 20px; font-size: 15px; }
+            .collapse-section .collapse-body { padding: 20px; }
+            .timeline { padding-left: 24px; }
+            .timeline-item { padding: 14px 18px; }
+        }
+
+        /* ===== Mobile (<=768px) ===== */
+        @media (max-width: 768px) {
+            .container { padding: 16px 12px 40px; }
+            .header-inner { padding: 14px 16px; }
+            .header h1 { font-size: 18px; }
+            .header h1 span { font-size: 13px; }
+            .nav-inner { padding: 0 8px; }
+            .nav a { padding: 10px 14px; font-size: 12px; }
+
+            .section { margin-bottom: 28px; }
+            .section-title { font-size: 17px; margin-bottom: 16px; padding-bottom: 10px; }
+
+            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; }
+            .stat-card { padding: 14px 10px; }
+            .stat-card .stat-num { font-size: 24px; }
+            .stat-card .stat-label { font-size: 11px; }
+
+            .filter-bar { gap: 6px; margin-bottom: 16px; }
+            .filter-btn { padding: 6px 14px; font-size: 12px; min-height: 40px; }
+
+            .m-project-card { margin-bottom: 14px; }
+            .m-project-card .m-card-header { padding: 14px 14px 10px; }
+            .m-project-card .m-card-header .m-title { font-size: 14px; }
+            .m-project-card .m-card-body { padding: 2px 14px 14px; }
+            .m-field { padding: 8px 0; font-size: 13px; }
+            .m-field .m-label { min-width: 70px; max-width: 70px; font-size: 11px; }
+
+            .roadmap-quarter { margin-bottom: 10px; }
+            .roadmap-items { gap: 6px; }
+            .roadmap-item { font-size: 11px; padding: 6px 10px; }
+
+            .unit-summary { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .unit-card { padding: 14px 16px; }
+            .unit-card .unit-count { font-size: 20px; }
+            .unit-card .unit-name { font-size: 12px; }
+            .unit-card .unit-desc { font-size: 11px; }
+
+            .card { padding: 18px 16px; border-radius: 10px; }
+            .card h3 { font-size: 15px; margin-bottom: 10px; }
+            .card p { font-size: 14px; line-height: 1.75; }
+
+            .contact-bar {
+                flex-direction: column; align-items: flex-start;
+                gap: 10px; padding: 14px 18px;
+            }
+            .contact-bar-sep { display: none; }
+            .contact-bar-name { font-size: 16px; }
+
+            .lifecycle-bar { padding: 16px 14px; }
+            .lifecycle-step .step-label { font-size: 11px; }
+            .lifecycle-step .step-pct { font-size: 15px; }
+
+            .info-grid { grid-template-columns: 1fr; gap: 12px; }
+            .info-item { padding: 16px 18px; }
+            .info-item .value { font-size: 14px; }
+
+            .biz-grid { grid-template-columns: 1fr; gap: 12px; }
+
+            .badge-group { gap: 6px; }
+            .badge { padding: 6px 12px; font-size: 12px; }
+
+            .collapse-section summary { padding: 14px 16px; font-size: 14px; }
+            .collapse-section .collapse-body { padding: 16px; }
+
+            .timeline { padding-left: 20px; }
+            .timeline::before { left: 6px; }
+            .timeline-item { padding: 12px 16px; margin-bottom: 16px; }
+            .timeline-item::before { left: -20px; width: 12px; height: 12px; top: 20px; }
+
+            .action-box { padding: 16px 16px; }
+            .action-box ol { margin-left: 18px; font-size: 13px; }
+
+            .footer { padding: 18px 12px; font-size: 12px; }
+        }
+
+        /* ===== Small Mobile (<=480px) ===== */
+        @media (max-width: 480px) {
+            .container { padding: 12px 8px 32px; }
+            .header-inner { padding: 12px 12px; }
+            .header h1 { font-size: 16px; }
+            .header h1 span { font-size: 12px; }
+            .header-meta { font-size: 11px; }
+            .nav a { padding: 10px 12px; font-size: 11px; }
+
+            .section-title { font-size: 15px; gap: 8px; }
+            .section-title .icon { width: 24px; height: 24px; font-size: 12px; border-radius: 6px; }
+
+            .stats-bar { gap: 8px; margin-bottom: 16px; }
+            .stat-card { padding: 12px 8px; }
+            .stat-card .stat-num { font-size: 20px; }
+            .stat-card .stat-label { font-size: 10px; }
+
+            .filter-btn { padding: 5px 10px; font-size: 11px; min-height: 36px; }
+
+            .m-project-card .m-card-header { padding: 12px 12px 8px; }
+            .m-project-card .m-card-header .m-title { font-size: 13px; }
+            .m-project-card .m-card-body { padding: 0 12px 12px; }
+            .m-field { padding: 7px 0; font-size: 12px; }
+            .m-field .m-label { min-width: 62px; max-width: 62px; font-size: 10px; }
+            .m-field .m-value.amount { font-size: 14px; }
+
+            .roadmap-label { padding: 6px 10px; font-size: 12px; }
+            .roadmap-item { font-size: 10px; padding: 5px 8px; }
+
+            .unit-summary { grid-template-columns: 1fr; }
+
+            .card { padding: 14px 12px; }
+            .card h3 { font-size: 14px; }
+            .card p { font-size: 13px; }
+
+            .lifecycle-step .step-label { font-size: 10px; }
+            .lifecycle-step .step-pct { font-size: 14px; }
+
+            .contact-bar { padding: 12px 14px; }
+            .contact-bar-title { font-size: 13px; }
+            .contact-bar-name { font-size: 15px; }
+            .contact-bar-info { font-size: 12px; }
+
+            .info-item { padding: 14px 14px; }
+            .info-item .label { font-size: 10px; }
+            .info-item .value { font-size: 13px; }
+
+            .badge { padding: 5px 10px; font-size: 11px; }
+            .badge-group { gap: 5px; }
+
+            .collapse-section summary { padding: 12px 14px; font-size: 13px; gap: 8px; }
+            .collapse-section .collapse-body { padding: 14px 12px; }
+
+            .timeline { padding-left: 16px; }
+            .timeline-item { padding: 10px 12px; }
+            .timeline-item .year { font-size: 12px; }
+            .timeline-item h4 { font-size: 13px; }
+            .timeline-item p { font-size: 12px; }
+
+            .footer { font-size: 11px; padding: 16px 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== Header + Nav ===== -->
+<div class="header">
+    <div class="header-inner">
+        <h1>鸿利智汇集团股份有限公司 <span>2026年度奖补项目申报清单</span></h1>
+        <div class="header-meta">编制日期：2026-10-19 &nbsp;|&nbsp; 股票代码：300219.SZ &nbsp;|&nbsp; 注册地：广东省广州市花都区</div>
+    </div>
+    <div class="nav">
+        <div class="nav-inner">
+            <a href="#projects" class="active">可申报项目清单</a>
+            <a href="#policy">政策依据汇总</a>
+            <a href="#tips">重要提示</a>
+            <a href="#company">企业详情 &#9660;</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- ═══ 首屏核心板块 ═══ -->
+
+    <div class="section" id="projects">
+        <div class="section-title">
+            <div class="icon">1</div>
+            2026年度可申报奖补项目清单
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-num">9</div>
+                <div class="stat-label">可申报项目总数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">~8100</div>
+                <div class="stat-label">预计奖补总额（万元）</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">5</div>
+                <div class="stat-label">国家级项目</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">4</div>
+                <div class="stat-label">省/市/区级项目</div>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterTable('all')">全部</button>
+            <button class="filter-btn" onclick="filterTable('national')">国家级</button>
+            <button class="filter-btn" onclick="filterTable('province')">省级</button>
+            <button class="filter-btn" onclick="filterTable('city')">市级</button>
+            <button class="filter-btn" onclick="filterTable('district')">区级</button>
+        </div>
+
+        <!-- 桌面端表格 -->
+        <div class="table-wrapper">
+            <table id="projectTable">
+                <thead>
+                    <tr>
+                        <th style="width:40px">序号</th>
+                        <th style="min-width:180px">可申报项目名称</th>
+                        <th style="min-width:100px">项目类别</th>
+                        <th style="min-width:110px">归口部门</th>
+                        <th style="min-width:80px">申报层级</th>
+                        <th style="min-width:80px">申报周期</th>
+                        <th style="min-width:100px">预计奖补金额（万元）</th>
+                        <th style="min-width:120px">关键技术方向</th>
+                        <th style="min-width:220px">申报核心条件</th>
+                        <th style="min-width:200px">所需材料</th>
+                        <th style="min-width:200px">政策依据（官方文件）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-level="national">
+                        <td data-label="序号">1</td>
+                        <td data-label="项目名称"><strong>超长期特别国债&#8220;两新&#8221;——电子信息重点领域设备更新改造专项</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">技术改造</span></td>
+                        <td data-label="归口部门">国家发改委（环资司）<br>广东省发改委转报</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">每年1-4月分批<br>（2027年度批次）</td>
+                        <td data-label="预计奖补" class="amount">1200-2000</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">全自动固晶/焊线机</span>
+                            <span class="tech-tag hw">COB巨量转移线</span>
+                            <span class="tech-tag sw">MES/APS</span>
+                            <span class="tech-tag ai">AOI视觉检测</span>
+                        </td>
+                        <td data-label="核心条件">1.固定资产投资&#8805;100万元，补助&#8804;核定固投15%；2.须为<strong>在建</strong>技改项目（未开工、已完工、新建、异地搬迁一律剔除）；3.淘汰设备购置总额&#8805;新设备投资10%，且淘汰设备折旧满6年；4.新设备须为全新设备；5.须先纳入国家重大建设项目库&#8220;超长期特别国债&#8221;模块（非储不报）；6.未重复获得其他中央财政资金</td>
+                        <td data-label="所需材料">项目备案/核准文件；淘汰设备清单（原值、折旧年限、处置方案）；设备采购合同与清单；资金到位证明（存款证明/贷款意向书）；廉洁合规承诺书；环评能评安评手续</td>
+                        <td data-label="政策依据" class="policy-ref"><a href="https://www.ndrc.gov.cn/fggz/202604/t20260430_1405007.html" target="_blank" rel="noopener">2026年第二批915亿元&#8220;两新&#8221;设备更新项目清单和资金安排已下达（国家发改委）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="national">
+                        <td data-label="序号">2</td>
+                        <td data-label="项目名称"><strong>超长期特别国债&#8220;两新&#8221;——工业重点领域设备更新改造专项（汽车零部件方向）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">技术改造</span></td>
+                        <td data-label="归口部门">国家发改委<br>申报主体：丹阳谊善车灯（江苏属地）</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">每年1-4月分批</td>
+                        <td data-label="预计奖补" class="amount">300-600</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">车灯注塑/镀膜线</span>
+                            <span class="tech-tag hw">ADB大灯总装线</span>
+                            <span class="tech-tag sw">产线SCADA</span>
+                        </td>
+                        <td data-label="核心条件">1.汽车零部件及配件制造属11大支持行业之一；2.固定资产投资&#8805;200万元，补助&#8804;核定固投15%；3.由<strong>项目所在地省级发改部门</strong>转报——谊善车灯（江苏丹阳）、江西鸿利（南昌）须分别在江苏、江西属地申报，不占用广东额度，可与总部项目并行</td>
+                        <td data-label="所需材料">同上；另需子公司独立法人执照、属地纳统证明、淘汰设备折旧凭证</td>
+                        <td data-label="政策依据" class="policy-ref"><a href="https://www.ndrc.gov.cn/fggz/202604/t20260430_1405007.html" target="_blank" rel="noopener">2026年&#8220;两新&#8221;设备更新项目清单和资金安排（国家发改委）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="national">
+                        <td data-label="序号">3</td>
+                        <td data-label="项目名称"><strong>国家发改委先进制造业和现代服务业融合发展专项（新型显示／智能终端方向）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">新建厂房</span></td>
+                        <td data-label="归口部门">国家发展改革委</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">5-7月<br>（第二批预通知5月、6-7月上报）</td>
+                        <td data-label="预计奖补" class="amount">2000-4000</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">车载Mini LED背光</span>
+                            <span class="tech-tag hw">户外COB直显</span>
+                            <span class="tech-tag hw">TV背光大尺寸线</span>
+                            <span class="tech-tag sw">研发设计服务</span>
+                        </td>
+                        <td data-label="核心条件">1.项目固定资产总投资&#8805;5000万元，设备购置占比&#8805;60%；2.须为<strong>在建</strong>状态、投资完成率30%-50%（最高不超80%）；3.四证四评齐全（土地证、用地规划、工程规划、施工许可＋环评、能评、安评、水保）；4.须提前纳入国家重大建设项目库储备；5.补助按核定固投15%-30%</td>
+                        <td data-label="所需材料">项目可研报告与备案；四证四评文件；新增投资与形象进度证明；国家重大建设项目库入库编码；资金拼盘闭合证明；自主创新与进口替代说明</td>
+                        <td data-label="政策依据" class="policy-ref">国家发展改革委先进制造业和现代服务业融合发展专项年度申报通知（2026年度第二批，具体文号以发改委正式发文为准）</td>
+                    </tr>
+                    <tr data-level="national">
+                        <td data-label="序号">4</td>
+                        <td data-label="项目名称"><strong>国家重点研发计划&#8220;战略性科技创新合作&#8221;重点专项（先进制造方向，企业牵头）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">科技创新</span></td>
+                        <td data-label="归口部门">科技部</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">9-10月<br>（2026年度受理9.3-10.8，2027年度同期）</td>
+                        <td data-label="预计奖补" class="amount">300-700</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag ai">Micro LED巨量转移</span>
+                            <span class="tech-tag hw">车规级LED封装</span>
+                            <span class="tech-tag sw">光学仿真设计</span>
+                        </td>
+                        <td data-label="核心条件">1.境内注册独立法人，企业可牵头；2.须具备实质性国际合作基础（公司已与意大利道依茨法尔合作、产品出口40多国、泰国基地2026年4月设立，可作支撑）；3.联合境外优势团队并签订合作协议；4.单项国拨经费多数低于700万元，&#8805;700万元可设课题</td>
+                        <td data-label="所需材料">项目申报书；中外双方合作协议与知识产权约定；前期合作成果（论文/专利/联合实验室）；企业配套资金承诺；伦理与合规审查表</td>
+                        <td data-label="政策依据" class="policy-ref">《国家重点研发计划管理暂行办法》（国科发资〔2024〕28号）及国家重点研发计划年度项目申报指南</td>
+                    </tr>
+                    <tr data-level="national">
+                        <td data-label="序号">5</td>
+                        <td data-label="项目名称"><strong>中央预算内投资·数字经济发展专项（行业高质量数据集／数据赋能方向）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">智能制造</span></td>
+                        <td data-label="归口部门">国家发改委 ＋ 国家数据局</td>
+                        <td data-label="申报层级"><span class="level-tag level-national">国家级</span></td>
+                        <td data-label="申报周期">10-11月<br><span style="color:#c0392b;font-weight:700">当前即处窗口期</span></td>
+                        <td data-label="预计奖补" class="amount">400-800</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag ai">缺陷样本数据集</span>
+                            <span class="tech-tag ai">工艺参数时序数据</span>
+                            <span class="tech-tag sw">可信数据空间</span>
+                            <span class="tech-tag hw">数据采集改造</span>
+                        </td>
+                        <td data-label="核心条件">1.&#8220;工业制造&#8221;为国家数据局列明的重点领域，Mini/Micro LED封装与显示属典型高价值工业数据场景；2.支持形态：行业高质量数据集建设先行先试、数据标注创新试验区、可信数据空间、数据赋能工场；3.支持链主单位以联合体牵头，带动上下游中小企业（公司可为LED封装/显示&#8220;链主&#8221;）；4.须纳入发改委项目库；5.具体补助比例与额度以年度申报指南为准</td>
+                        <td data-label="所需材料">数据资源底数清单与数据集需求清单；数据安全等保测评与合规承诺；数据集规模/标注准确率佐证；联合体共建协议；项目投资与绩效目标表</td>
+                        <td data-label="政策依据" class="policy-ref">《关于推进行业高质量数据集建设行动的实施方案》（国家数据局，国数科基〔2026〕25号，2026年6月3日印发）</td>
+                    </tr>
+                    <tr data-level="province">
+                        <td data-label="序号">6</td>
+                        <td data-label="项目名称"><strong>广东省开放型经济专项资金（出口信用保险保费补助＋&#8220;粤贸全球&#8221;品牌工程参展补助）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">外贸外经</span></td>
+                        <td data-label="归口部门">广东省商务厅<br>（广州市商务局受理）</td>
+                        <td data-label="申报层级"><span class="level-tag level-province">省级</span></td>
+                        <td data-label="申报周期">3-4月（信保）<br>8月底前（次年度重点展会名录入库）</td>
+                        <td data-label="预计奖补" class="amount">50-150</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">LED出口产品</span>
+                            <span class="tech-tag sw">收汇风险管理</span>
+                        </td>
+                        <td data-label="核心条件">1.须有上年度出口实绩并在粤登记注册、依法纳税；2.短期险按实缴保费&#8804;30%补助（单项冠军/专精特新&#8220;小巨人&#8221;可提高至40%），单企业上限500万元/年；3.境外展展位费、特装费按次数补贴；4.公司出口覆盖40多个国家和地区、鸿利显示海外营收占比预计超50%，适配度高</td>
+                        <td data-label="所需材料">出口实绩报关单；保险合同与保费发票；参展通知、展位合同与付款凭证；海关AEO/出口退免税证明</td>
+                        <td data-label="政策依据" class="policy-ref">广东省商务厅开放型经济专项资金年度申报指南；广州市商务局出口信用保险保费资助实施细则</td>
+                    </tr>
+                    <tr data-level="province">
+                        <td data-label="序号">7</td>
+                        <td data-label="项目名称"><strong>广东省制造业当家重点任务保障专项·企业技术改造资金（设备奖励）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">技术改造</span></td>
+                        <td data-label="归口部门">广东省工业和信息化厅</td>
+                        <td data-label="申报层级"><span class="level-tag level-province">省级</span></td>
+                        <td data-label="申报周期">每年7-8月<br>（申报上一年度完工项目）</td>
+                        <td data-label="预计奖补" class="amount">400-800</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">SMD/POWER LED产线</span>
+                            <span class="tech-tag hw">陶瓷LED封装设备</span>
+                            <span class="tech-tag sw">工业软件</span>
+                        </td>
+                        <td data-label="核心条件">1.项目在粤实施并取得工信部门技改备案/核准/审批；2.须为<strong>申报上一年度1月1日至12月31日期间完工</strong>的项目（即2028年度资金对应2026年完工项目）；3.珠三角地区新设备投资额&#8805;700万元；4.按新设备购置额&#8804;20%奖励，单项目上限1500万元；5.同一申报主体同一年度原则上只能申报1个设备奖励项目；6.竞争性评审入库，入库不等于最终获支持</td>
+                        <td data-label="所需材料">技改备案文件；项目完工评价报告；设备购置发票与付款凭证（须逐台对应）；专项审计报告；&#8220;数字工信&#8221;平台（gdii.gd.gov.cn/szgx）在线申报表</td>
+                        <td data-label="政策依据" class="policy-ref"><a href="https://sqzc.gd.gov.cn/sqzc/m/cms/publicity/publicityInfo?id=nfsheqigsxx5814067" target="_blank" rel="noopener">广东省工信厅关于组织2027年广东省制造业当家重点任务保障专项企业技术改造资金项目入选项目库的通知（粤工信技改函〔2026〕40号）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                    <tr data-level="city">
+                        <td data-label="序号">8</td>
+                        <td data-label="项目名称"><strong>广州市支持工业企业技术改造若干措施（设备奖励＋厂房建安补助＋贷款贴息／融资租赁补贴）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">技术改造</span></td>
+                        <td data-label="归口部门">广州市工业和信息化局</td>
+                        <td data-label="申报层级"><span class="level-tag level-city">市级</span></td>
+                        <td data-label="申报周期">3-4月发通知<br>4-5月系统受理</td>
+                        <td data-label="预计奖补" class="amount">600-1500</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">显示产业园产线</span>
+                            <span class="tech-tag hw">洁净厂房配套设备</span>
+                            <span class="tech-tag sw">数字化能碳管理</span>
+                        </td>
+                        <td data-label="核心条件">1.新设备投资额&#8805;500万元，按&#8804;20%奖励；2.厂房建安投资按2%补助、上限500万元；3.技改设备贷款贴息、融资租赁补贴市级上限各500万元/年；4.<strong>省、市两级合计补助&#8804;3000万元</strong>，同一项目可与省技改叠加；5.项目须备案、完工并纳入固定资产投资统计；6.&#8220;小技改&#8221;15%档仅限中小型企业，公司营收规模已超出该档</td>
+                        <td data-label="所需材料">项目备案证；施工许可与竣工备案；设备发票清单（含合同、付款凭证）；纳统回执；贷款合同与利息支付凭证；上年度审计报告</td>
+                        <td data-label="政策依据" class="policy-ref">《广州市支持工业企业技术改造若干措施》（穗府办规〔2024〕12号，有效期至2027年底）及广州市工信局年度申报通知</td>
+                    </tr>
+                    <tr data-level="district">
+                        <td data-label="序号">9</td>
+                        <td data-label="项目名称"><strong>花都区先进制造业扩能提级奖励（投资贡献奖／营收增量奖／委外加工增效奖）</strong></td>
+                        <td data-label="项目类别"><span class="category-tag">企业培育</span></td>
+                        <td data-label="归口部门">广州市花都区科技工业和信息化局</td>
+                        <td data-label="申报层级"><span class="level-tag level-district">区级</span></td>
+                        <td data-label="申报周期">12月底-次年1月<br>（上年度奖励征集）</td>
+                        <td data-label="预计奖补" class="amount">100-300</td>
+                        <td data-label="技术方向">
+                            <span class="tech-tag hw">花都显示产业基地</span>
+                            <span class="tech-tag hw">车灯模组扩产</span>
+                        </td>
+                        <td data-label="核心条件">1.在花都区登记注册、纳税的先进制造业企业；2.投资贡献奖按上年度新增固定资产投资一定比例给予，单企业上限300万元；3.营收增量奖按营收增量一定比例给予，上限200万元（2025年营收同比+3.02%，该档需重点测算是否达门槛）；4.委外加工增效奖上限50万元；5.与区其他扶持政策按&#8220;从高不重复&#8221;原则执行</td>
+                        <td data-label="所需材料">奖励申请表；上年度新增固定资产台账与发票；统计联网直报平台数据回执；企业所得税年度申报表；营业执照与信用报告</td>
+                        <td data-label="政策依据" class="policy-ref"><a href="https://www.huadu.gov.cn/zfxxgkml/gzshdqkjgyswhxxhj/content/post_10617181.html" target="_blank" rel="noopener">关于征集2025年度花都区先进制造业扩能提级奖励项目的通知（依据：花府办规〔2025〕1号）<span class="ext-icon">&#8599;</span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 移动端卡片 -->
+        <div class="mobile-cards" id="mobileCards">
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">1</div>
+                    <div class="m-title">超长期特别国债&#8220;两新&#8221;——电子信息重点领域设备更新改造专项</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">技术改造</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">国家发改委（环资司），广东省发改委转报</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">每年1-4月分批（2027年度批次）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">1200-2000万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag hw">全自动固晶/焊线机</span>
+                        <span class="tech-tag hw">COB巨量转移线</span>
+                        <span class="tech-tag sw">MES/APS</span>
+                        <span class="tech-tag ai">AOI视觉检测</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.固投&#8805;100万元，补助&#8804;核定固投15%；2.须为在建技改项目（未开工、已完工、新建、异地搬迁一律剔除）；3.淘汰设备购置总额&#8805;新设备投资10%且折旧满6年；4.新设备须全新；5.先纳入国家重大建设项目库（非储不报）；6.未重复获得其他中央财政资金</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">项目备案文件；淘汰设备清单（原值、折旧、处置方案）；设备采购合同与清单；资金到位证明；廉洁合规承诺书；环评能评安评手续</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref"><a href="https://www.ndrc.gov.cn/fggz/202604/t20260430_1405007.html" target="_blank" rel="noopener">2026年第二批915亿元&#8220;两新&#8221;设备更新项目清单和资金安排已下达（国家发改委）<span class="ext-icon">&#8599;</span></a></div></div>
+                </div>
+            </div>
+
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">2</div>
+                    <div class="m-title">超长期特别国债&#8220;两新&#8221;——工业重点领域设备更新改造专项（汽车零部件方向）</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">技术改造</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">国家发改委；申报主体为丹阳谊善车灯（江苏属地）</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">每年1-4月分批</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">300-600万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag hw">车灯注塑/镀膜线</span>
+                        <span class="tech-tag hw">ADB大灯总装线</span>
+                        <span class="tech-tag sw">产线SCADA</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.汽车零部件制造属11大支持行业；2.固投&#8805;200万元，补助&#8804;核定固投15%；3.由项目所在地省级发改部门转报——谊善车灯（江苏丹阳）、江西鸿利（南昌）须分别在江苏、江西属地申报，不占用广东额度，可与总部项目并行</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">同第1项；另需子公司独立法人执照、属地纳统证明、淘汰设备折旧凭证</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref"><a href="https://www.ndrc.gov.cn/fggz/202604/t20260430_1405007.html" target="_blank" rel="noopener">2026年&#8220;两新&#8221;设备更新项目清单和资金安排（国家发改委）<span class="ext-icon">&#8599;</span></a></div></div>
+                </div>
+            </div>
+
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">3</div>
+                    <div class="m-title">国家发改委先进制造业和现代服务业融合发展专项（新型显示／智能终端方向）</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">新建厂房</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">国家发展改革委</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">5-7月（第二批预通知5月、6-7月上报）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">2000-4000万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag hw">车载Mini LED背光</span>
+                        <span class="tech-tag hw">户外COB直显</span>
+                        <span class="tech-tag hw">TV背光大尺寸线</span>
+                        <span class="tech-tag sw">研发设计服务</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.固投&#8805;5000万元，设备占比&#8805;60%；2.须为在建状态、投资完成率30%-50%（最高不超80%）；3.四证四评齐全；4.须提前纳入国家重大建设项目库储备；5.补助按核定固投15%-30%</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">可研报告与备案；四证四评文件；新增投资与形象进度证明；国家重大建设项目库入库编码；资金拼盘闭合证明；自主可控与进口替代说明</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref">国家发展改革委先进制造业和现代服务业融合发展专项年度申报通知（2026年度第二批，具体文号以发改委正式发文为准）</div></div>
+                </div>
+            </div>
+
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">4</div>
+                    <div class="m-title">国家重点研发计划&#8220;战略性科技创新合作&#8221;重点专项（先进制造方向，企业牵头）</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">科技创新</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">科技部</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">9-10月（2026年度受理9.3-10.8，2027年度同期）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">300-700万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag ai">Micro LED巨量转移</span>
+                        <span class="tech-tag hw">车规级LED封装</span>
+                        <span class="tech-tag sw">光学仿真设计</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.境内注册独立法人，企业可牵头；2.须具备实质性国际合作基础（与意大利道依茨法尔合作、产品出口40多国、泰国基地2026年4月设立可作支撑）；3.联合境外优势团队并签订协议；4.单项国拨经费多数低于700万元</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">项目申报书；中外双方合作协议与知识产权约定；前期合作成果；企业配套资金承诺；伦理与合规审查表</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref">《国家重点研发计划管理暂行办法》（国科发资〔2024〕28号）及年度项目申报指南</div></div>
+                </div>
+            </div>
+
+            <div class="m-project-card" data-level="national">
+                <div class="m-card-header">
+                    <div class="m-seq">5</div>
+                    <div class="m-title">中央预算内投资·数字经济发展专项（行业高质量数据集／数据赋能方向）</div>
+                    <span class="level-tag level-national">国家级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">智能制造</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">国家发改委 ＋ 国家数据局</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">10-11月（当前即处窗口期）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">400-800万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag ai">缺陷样本数据集</span>
+                        <span class="tech-tag ai">工艺参数时序数据</span>
+                        <span class="tech-tag sw">可信数据空间</span>
+                        <span class="tech-tag hw">数据采集改造</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.&#8220;工业制造&#8221;为国家数据局列明重点领域；2.可申报形态：行业高质量数据集先行先试、数据标注创新试验区、可信数据空间、数据赋能工场；3.支持链主单位以联合体牵头带动上下游；4.须纳入发改委项目库；5.补助比例与额度以年度申报指南为准</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">数据资源底数与数据集需求清单；数据安全等保测评与合规承诺；数据集规模/标注准确率佐证；联合体共建协议；投资与绩效目标表</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref">《关于推进行业高质量数据集建设行动的实施方案》（国家数据局，国数科基〔2026〕25号，2026年6月3日印发）</div></div>
+                </div>
+            </div>
+
+            <div class="m-project-card" data-level="province">
+                <div class="m-card-header">
+                    <div class="m-seq">6</div>
+                    <div class="m-title">广东省开放型经济专项资金（出口信用保险保费补助＋&#8220;粤贸全球&#8221;参展补助）</div>
+                    <span class="level-tag level-province">省级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">外贸外经</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">广东省商务厅（广州市商务局受理）</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">3-4月（信保）；8月底前（次年度重点展会名录入库）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">50-150万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag hw">LED出口产品</span>
+                        <span class="tech-tag sw">收汇风险管理</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.须有上年度出口实绩并在粤登记注册、依法纳税；2.短期险按实缴保费&#8804;30%补助（&#8220;小巨人&#8221;可提高至40%），单企业上限500万元/年；3.境外展展位费、特装费按次数补贴；4.公司出口覆盖40多个国家，鸿利显示海外营收占比预计超50%，适配度高</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">出口报关单；保险合同与保费发票；参展通知、展位合同与付款凭证；AEO/出口退免税证明</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref">广东省商务厅开放型经济专项资金年度申报指南；广州市商务局出口信用保险保费资助实施细则</div></div>
+                </div>
+            </div>
+
+            <div class="m-project-card" data-level="province">
+                <div class="m-card-header">
+                    <div class="m-seq">7</div>
+                    <div class="m-title">广东省制造业当家重点任务保障专项·企业技术改造资金（设备奖励）</div>
+                    <span class="level-tag level-province">省级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">技术改造</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">广东省工业和信息化厅</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">每年7-8月（申报上一年度完工项目）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">400-800万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag hw">SMD/POWER LED产线</span>
+                        <span class="tech-tag hw">陶瓷LED封装设备</span>
+                        <span class="tech-tag sw">工业软件</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.项目在粤实施并取得工信部门技改备案；2.须为上一年度1月1日至12月31日期间完工项目；3.珠三角新设备投资&#8805;700万元；4.按新设备购置额&#8804;20%奖励，单项目上限1500万元；5.同一主体同一年度原则上只报1个设备奖励项目；6.竞争性评审，入库不等于获支持</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">技改备案文件；完工评价报告；设备购置发票与付款凭证（逐台对应）；专项审计报告；&#8220;数字工信&#8221;平台在线申报表</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref"><a href="https://sqzc.gd.gov.cn/sqzc/m/cms/publicity/publicityInfo?id=nfsheqigsxx5814067" target="_blank" rel="noopener">广东省工信厅关于组织2027年省级企业技术改造资金项目入选项目库的通知（粤工信技改函〔2026〕40号）<span class="ext-icon">&#8599;</span></a></div></div>
+                </div>
+            </div>
+
+            <div class="m-project-card" data-level="city">
+                <div class="m-card-header">
+                    <div class="m-seq">8</div>
+                    <div class="m-title">广州市支持工业企业技术改造若干措施（设备奖励＋厂房建安＋贷款贴息／融资租赁）</div>
+                    <span class="level-tag level-city">市级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">技术改造</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">广州市工业和信息化局</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">3-4月发通知，4-5月系统受理</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">600-1500万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag hw">显示产业园产线</span>
+                        <span class="tech-tag hw">洁净厂房配套设备</span>
+                        <span class="tech-tag sw">数字化能碳管理</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.新设备投资&#8805;500万元按&#8804;20%奖励；2.厂房建安2%补助、上限500万元；3.贷款贴息、融资租赁补贴市级上限各500万元/年；4.省市两级合计&#8804;3000万元，可与省技改叠加同一项目；5.须备案、完工并纳入固投统计；6.&#8220;小技改&#8221;15%档仅限中小企业，公司超出该档</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">项目备案证；施工许可与竣工备案；设备发票清单（含合同、付款凭证）；纳统回执；贷款合同与利息凭证；上年度审计报告</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref">《广州市支持工业企业技术改造若干措施》（穗府办规〔2024〕12号，有效期至2027年底）及市工信局年度申报通知</div></div>
+                </div>
+            </div>
+
+            <div class="m-project-card" data-level="district">
+                <div class="m-card-header">
+                    <div class="m-seq">9</div>
+                    <div class="m-title">花都区先进制造业扩能提级奖励（投资贡献奖／营收增量奖／委外加工增效奖）</div>
+                    <span class="level-tag level-district">区级</span>
+                </div>
+                <div class="m-card-body">
+                    <div class="m-field"><div class="m-label">项目类别</div><div class="m-value"><span class="category-tag">企业培育</span></div></div>
+                    <div class="m-field"><div class="m-label">归口部门</div><div class="m-value">广州市花都区科技工业和信息化局</div></div>
+                    <div class="m-field"><div class="m-label">申报周期</div><div class="m-value">12月底-次年1月（上年度奖励征集）</div></div>
+                    <div class="m-field"><div class="m-label">预计奖补</div><div class="m-value amount">100-300万元</div></div>
+                    <div class="m-field"><div class="m-label">技术方向</div><div class="m-value">
+                        <span class="tech-tag hw">花都显示产业基地</span>
+                        <span class="tech-tag hw">车灯模组扩产</span>
+                    </div></div>
+                    <div class="m-field"><div class="m-label">核心条件</div><div class="m-value">1.花都区登记注册、纳税的先进制造业企业；2.投资贡献奖按新增固定资产投资一定比例给予，上限300万元；3.营收增量奖上限200万元（2025年营收同比+3.02%，该档须先测算是否达门槛）；4.委外加工增效奖上限50万元；5.与区其他政策按&#8220;从高不重复&#8221;执行</div></div>
+                    <div class="m-field"><div class="m-label">所需材料</div><div class="m-value">奖励申请表；新增固定资产台账与发票；统计联网直报回执；企业所得税年度申报表；营业执照与信用报告</div></div>
+                    <div class="m-field"><div class="m-label">政策依据</div><div class="m-value policy-ref"><a href="https://www.huadu.gov.cn/zfxxgkml/gzshdqkjgyswhxxhj/content/post_10617181.html" target="_blank" rel="noopener">关于征集2025年度花都区先进制造业扩能提级奖励项目的通知（花府办规〔2025〕1号）<span class="ext-icon">&#8599;</span></a></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 申报规划路线图 -->
+        <div style="margin-top: 30px;">
+            <h3 style="font-size: 17px; color: var(--primary); margin-bottom: 14px;">&#128197; 申报规划路线图（按时间窗口）</h3>
+            <div class="roadmap">
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q1<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">1-3月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item national"><strong>&#9312;</strong> 电子信息领域设备更新（国债&#8220;两新&#8221;）<br><span style="opacity:0.7">1-4月分批 | 国家发改委</span></div>
+                        <div class="roadmap-item national"><strong>&#9313;</strong> 工业领域设备更新（谊善车灯江苏申报）<br><span style="opacity:0.7">1-4月分批 | 国家发改委</span></div>
+                        <div class="roadmap-item city"><strong>&#9331;</strong> 广州市技改（设备＋建安＋贴息）<br><span style="opacity:0.7">3-4月通知 | 广州市工信局</span></div>
+                        <div class="roadmap-item province"><strong>&#9315;</strong> 出口信保保费补助<br><span style="opacity:0.7">3-4月 | 省商务厅</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q2<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">4-6月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item national"><strong>&#9314;</strong> 先进制造业和现代服务业融合发展专项<br><span style="opacity:0.7">5-7月 | 国家发改委（须先入项目库）</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q3<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">7-9月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item province"><strong>&#9317;</strong> 广东省技改资金入库（设备奖励）<br><span style="opacity:0.7">7-8月 | 省工信厅&#8220;数字工信&#8221;平台</span></div>
+                        <div class="roadmap-item national"><strong>&#9316;</strong> 国家重点研发计划&#8220;战略性科技创新合作&#8221;<br><span style="opacity:0.7">9-10月受理 | 科技部</span></div>
+                        <div class="roadmap-item province"><strong>&#9315;</strong> &#8220;粤贸全球&#8221;次年重点展会名录入库<br><span style="opacity:0.7">8月底前 | 省商务厅</span></div>
+                    </div>
+                </div>
+                <div class="roadmap-quarter">
+                    <div class="roadmap-label">Q4<br><span style="font-size:11px;font-weight:400;color:var(--text-light)">10-12月</span></div>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item national" style="border-color:#e74c3c88;background:#fde8e833;"><strong>&#9318; 当前窗口</strong> 数字经济专项·行业高质量数据集<br><span style="opacity:0.7">10-11月征集 | 发改委＋国家数据局</span></div>
+                        <div class="roadmap-item district"><strong>&#9330;</strong> 花都区先进制造业扩能提级奖励<br><span style="opacity:0.7">12月底-次年1月 | 区科工信局</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 归口部门项目分布 -->
+        <div style="margin-top: 30px;">
+            <h3 style="font-size: 17px; color: var(--primary); margin-bottom: 14px;">&#127970; 归口部门项目分布</h3>
+            <div class="unit-summary">
+                <div class="unit-card">
+                    <div class="unit-name">国家发改委（环资司、高技司）＋ 国家数据局</div>
+                    <div class="unit-count">4</div>
+                    <div class="unit-desc">电子信息设备更新 / 工业设备更新 / 两业融合专项 / 数字经济专项</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">科技部</div>
+                    <div class="unit-count">1</div>
+                    <div class="unit-desc">国家重点研发计划·战略性科技创新合作</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">广东省工信厅 / 省商务厅</div>
+                    <div class="unit-count">2</div>
+                    <div class="unit-desc">省技改设备奖励 / 开放型经济专项资金</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">广州市工信局</div>
+                    <div class="unit-count">1</div>
+                    <div class="unit-desc">市技改若干措施（设备＋建安＋贴息）</div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-name">花都区科工信局</div>
+                    <div class="unit-count">1</div>
+                    <div class="unit-desc">先进制造业扩能提级奖励</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 金额量级升级路径与前置风险 -->
+        <div class="action-box">
+            <h4>&#128200; 金额量级升级路径与关键测算口径（务必先读）</h4>
+            <ol>
+                <li><strong>三条主线，量级递进：</strong>第一层&#8220;省市技改叠加&#8221;（省1500万上限＋市设备奖20%，同一项目合计封顶3000万）——只依赖已有完工项目，确定性最高；第二层&#8220;国债两新设备更新&#8221;（15%×大额设备投资，总部＋谊善＋江西可三线并行）——约1500-2600万；第三层&#8220;发改产业化专项&#8221;（两业融合15%-30%、单项目上限亿元级）——把量级从5000万级抬到1.5-2亿级。<strong>第三层必须靠&#8220;谋划新项目&#8221;解锁，不是材料能解决的。</strong></li>
+                <li><strong>核心短板（决定第三层能否成立）：</strong>公司2025年6月末<strong>在建工程仅0.68亿元</strong>，且主要为已基本完工的&#8220;新型背光显示二期&#8221;。发改条线亿元级专项一律要求&#8220;在建、投资完成率30%-50%、非储不报&#8221;——已完工与仅备案未开工均不予支持。因此第3项的2000-4000万属于<strong>&#8220;谋划型&#8221;预期</strong>：须在2026年底前完成三期项目（建议方向：车载Mini LED背光＋户外COB直显扩能，新增固投2-3亿元）备案、四证四评，并申请纳入国家重大建设项目库，2027年二季度方有申报资格。</li>
+                <li><strong>主体拆分是本公司最大的合规放大器：</strong>谊善车灯（江苏丹阳）、江西鸿利（南昌）、斯迈得（深圳）、佛达信号（广州）均为独立法人且各自具备省级资质，可分别在江苏、江西、深圳、广州属地申报国家级与属地项目，与总部项目并行、不互相占用额度。这是把清单总额从&#8220;单一主体上限&#8221;放大到集团口径的关键。</li>
+                <li><strong>海外投入不解锁国内财政补助：</strong>2026年4月设立的泰国公司（投资不超3750万元）不进入国内技改/设备更新口径，但须完成发改、商务、外汇ODI备案（该备案本身是外经贸类资金的门槛材料）。</li>
+                <li><strong>资金叠加红线：</strong>省技改同一主体同一年度原则上只能申报1个设备奖励项目；同一项目已获中央财政资金的，不得重复申报国债&#8220;两新&#8221;；省市技改可叠加但合计不超3000万元。</li>
+                <li><strong>金额估算口径：</strong>全部按&#8220;企业实际投资规模×补助比例&#8221;就低测算，未采用政策最高限额。设备投资基数取自公司机器设备余额约8.56亿元、年折旧摊销约2亿元的公开数据推算；营收43.53亿元，单个项目金额均控制在年营收5%以内。</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ===== 2. 政策依据汇总 ===== -->
+    <div class="section" id="policy">
+        <div class="section-title">
+            <div class="icon">2</div>
+            政策依据汇总
+        </div>
+
+        <div class="card policy-card">
+            <h3>国家级政策文件</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>1.</strong> <a href="https://www.ndrc.gov.cn/fggz/202604/t20260430_1405007.html" target="_blank" rel="noopener">2026年第二批915亿元&#8220;两新&#8221;设备更新项目清单和资金安排已下达（国家发展改革委）<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>2.</strong> 《推动大规模设备更新和消费品以旧换新行动方案》（国发〔2024〕7号）；《关于2026年实施大规模设备更新和消费品以旧换新政策的通知》（发改环资〔2025〕1745号）；《关于做好2026年超长期特别国债资金支持设备更新工作的通知》（发改办公厅）
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>3.</strong> 《关于推进行业高质量数据集建设行动的实施方案》（国家数据局，国数科基〔2026〕25号，2026年6月3日印发）
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>4.</strong> 《国家重点研发计划管理暂行办法》（国科发资〔2024〕28号）及国家重点研发计划年度项目申报指南
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px;">
+                    <strong>5.</strong> 国家发展改革委先进制造业和现代服务业融合发展专项年度申报通知（2026年度第二批，具体文号以发改委正式发文为准）
+                </div>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <h3>广东省级政策文件</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>1.</strong> <a href="https://sqzc.gd.gov.cn/sqzc/m/cms/publicity/publicityInfo?id=nfsheqigsxx5814067" target="_blank" rel="noopener">广东省工信厅关于组织2027年广东省制造业当家重点任务保障专项企业技术改造资金项目入选项目库的通知（粤工信技改函〔2026〕40号）<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>2.</strong> 《广东省工业企业技术改造&#8220;新技术、新工艺、新材料、新设备&#8221;应用指导目录（2026年版）》（广东省工信厅）
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px;">
+                    <strong>3.</strong> 广东省商务厅开放型经济专项资金年度申报指南（出口信用保险保费资助、&#8220;粤贸全球&#8221;品牌工程）
+                </div>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <h3>广州市 · 花都区政策文件</h3>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 2.2;">
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>1.</strong> 《广州市支持工业企业技术改造若干措施》（穗府办规〔2024〕12号，有效期至2027年底）及广州市工信局年度申报通知
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px; margin-bottom: 8px;">
+                    <strong>2.</strong> <a href="https://www.huadu.gov.cn/zfxxgkml/gzshdqkjgyswhxxhj/content/post_10617181.html" target="_blank" rel="noopener">关于征集2025年度花都区先进制造业扩能提级奖励项目的通知（依据：花府办规〔2025〕1号）<span class="ext-icon">&#8599;</span></a>
+                </div>
+                <div style="padding: 8px 12px; background: #fafafa; border-radius: 6px;">
+                    <strong>3.</strong> 《花都区促进专精特新中小企业高质量发展若干措施》（花府办〔2026〕1号，含花都区科技工业和信息化局年度奖励条款）
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 3. 重要提示 + 固定板块 ===== -->
+    <div class="section" id="tips">
+        <div class="card" style="background: #fffbeb; border-color: #f5deb3;">
+            <h3 style="color: #b8860b;">&#9888;&#65039; 重要提示</h3>
+            <p style="font-size: 13px; color: #8b7355; margin-top: 8px;">
+                本清单所列信息基于公开资料整理，仅供参考。具体申报条件、奖补金额和时间节点以各级主管部门发布的最新官方文件为准。建议企业密切关注国家发改委、广东省工业和信息化厅、广州市工业和信息化局、花都区科技工业和信息化局的年度申报通知，提前做好材料准备。预计奖补金额为基于公开政策及企业实际投资规模的保守预估值，可能因政策调整而变化。
+            </p>
+            <div class="lifecycle-bar">
+                <h4>&#128203; 项目申报全生命周期</h4>
+                <div class="lifecycle-steps">
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">项目申报</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">评审批复</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="bar"></div>
+                        <div class="step-label">资金下达</div>
+                        <div class="step-pct">20%</div>
+                    </div>
+                    <div class="lifecycle-step" style="flex: 2;">
+                        <div class="bar"></div>
+                        <div class="step-label">结项验收</div>
+                        <div class="step-pct">40%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-bar">
+            <div class="contact-bar-title">&#128222; 项目咨询联系人</div>
+            <div class="contact-bar-name">赵璐红</div>
+            <div class="contact-bar-info">
+                <span class="cb-label">舍得酒业</span> &middot; 公共事务部总经理
+            </div>
+            <div class="contact-bar-sep"></div>
+            <div class="contact-bar-info">
+                <span class="cb-label">电话</span> <a href="tel:18884606786">18884606786</a>
+            </div>
+            <div class="contact-bar-sep"></div>
+            <div class="contact-bar-info">
+                <span class="cb-label">地址</span> 四川省成都市武侯区复地复城国际T1
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ 折叠面板区域 ═══ -->
+
+    <div class="collapse-group" id="company">
+        <div class="collapse-group-title">&#9660; 企业详情（点击展开） &#9660;</div>
+
+        <details class="collapse-section">
+            <summary>&#127970; 企业概述</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <p>鸿利智汇集团股份有限公司（曾用名&#8220;广州市鸿利光电股份有限公司&#8221;）成立于2004年5月31日，2011年5月18日在深圳证券交易所创业板上市，注册地广州市花都区花东镇先科一路1号，法定代表人为李俊东，注册资本7.08亿元，员工4262人。公司是一家集研发、生产、销售于一体的LED半导体封装企业，实施&#8220;以LED半导体封装为主体，以汽车照明及电子、Mini/Micro LED新型显示为两翼&#8221;的&#8220;一体两翼&#8221;战略，2024年位居全球照明LED封装厂商营收第二（市占率约8%）。生产基地分布于广州、深圳、东莞、南昌、镇江，总面积超60万平方米，产品销往40多个国家和地区。控股股东为四川金舵投资有限责任公司，实际控制人为泸州市国有资产监督管理委员会，属国有控股上市企业。</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item"><div class="label">企业全称</div><div class="value">鸿利智汇集团股份有限公司</div></div>
+                    <div class="info-item"><div class="label">股票代码</div><div class="value">300219.SZ（深交所创业板）</div></div>
+                    <div class="info-item"><div class="label">成立 / 上市</div><div class="value">2004-05-31 / 2011-05-18</div></div>
+                    <div class="info-item"><div class="label">注册地</div><div class="value">广东省广州市花都区花东镇先科一路1号</div></div>
+                    <div class="info-item"><div class="label">法定代表人</div><div class="value">李俊东（董事长、总裁）</div></div>
+                    <div class="info-item"><div class="label">注册资本</div><div class="value">7.08亿元</div></div>
+                    <div class="info-item"><div class="label">员工规模</div><div class="value">4262人（研发人员近600人）</div></div>
+                    <div class="info-item"><div class="label">2025年营业收入</div><div class="value">43.53亿元（同比+3.02%）</div></div>
+                    <div class="info-item"><div class="label">2025年归母净利润</div><div class="value">9752万元（同比+19.88%）</div></div>
+                    <div class="info-item"><div class="label">研发投入</div><div class="value">约占营收4%-8%（约2.2亿元/年，近十年累计超15亿元）</div></div>
+                    <div class="info-item"><div class="label">企业性质</div><div class="value">国有控股上市公司（实控人泸州市国资委）</div></div>
+                    <div class="info-item"><div class="label">行业定位</div><div class="value">全球第二大照明LED封装厂商 / 超高清视频与新型显示产业链核心器件企业</div></div>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#9881; 主营业务</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <p>公司主营由三大板块构成：LED半导体封装（&#8220;一体&#8221;）、汽车照明及电子与Mini/Micro LED新型显示（&#8220;两翼&#8221;）。2025年LED封装产品收入31.21亿元（占比约74%），汽车照明业务收入10.68亿元（同比+31.97%），Mini/Micro LED显示业务营收超3亿元。主要子公司包括广州市鸿利显示电子有限公司（全资，Mini/Micro LED）、丹阳谊善车灯设备制造有限公司、广州市佛达信号设备有限公司、江西鸿利光电有限公司（南昌）、深圳市斯迈得半导体有限公司、广州市莱帝亚照明股份有限公司。</p>
+                </div>
+                <div class="biz-grid">
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #e8f4fd;">&#9881;</div>
+                        <h4>LED半导体封装（主体）</h4>
+                        <p>白光LED、车用LED、UV LED、Mini LED、灯丝、COB、LED支架等。拥有近100条SMD/HIGH POWER产线，月产能约11700KK；2025年收入31.21亿元，产品综合良率98%以上；灯丝产品市占率行业前列，植物照明获单笔千万级订单。</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #e8fde8;">&#128663;</div>
+                        <h4>汽车照明及电子（一翼）</h4>
+                        <p>车规级LED—模组—整灯全链条。2025年收入10.68亿元（+31.97%）。乘用车进入奥迪、大众、别克、福特、日产及长安、赛力斯、比亚迪、零跑、奇瑞；商用车供货海拉、麦格纳、宇通，应用于沃尔沃、奔驰。ADB大灯、Mini LED尾灯已量产。</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #fde8f4;">&#128250;</div>
+                        <h4>Mini/Micro LED新型显示（一翼）</h4>
+                        <p>鸿利显示（广州花都）负责。巨量转移速度150k/小时（目标300k/小时）；P0.6-P1.2玻璃基全系列封装能力；户外COB月产能5000平方米、出口占比超50%；VR背光模组累计出货超170万片（Meta、Varjo、小派）；已进入大疆供应链，车载背光配套马瑞利、海微。2025年营收超3亿元。</p>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-icon" style="background: #f3e8fd;">&#128300;</div>
+                        <h4>研发与检测平台</h4>
+                        <p>4个国家CNAS认可实验室（其一获美国EPA授权为能源之星实验室，注册号L7029）；7个省级工程技术研究中心；有效授权专利近1000项（其中发明专利206项）；参与&#8220;高光效长寿命半导体照明关键技术与产业化&#8221;项目获2019年度国家科学技术进步奖一等奖。</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#127942; 已获得的资质与荣誉</summary>
+            <div class="collapse-body">
+                <div class="card">
+                    <h3>国家级资质与荣誉</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-national">&#127942; 国家科学技术进步奖一等奖（2019年度，参与）</span>
+                        <span class="badge badge-national">&#127942; 国家高新技术企业</span>
+                        <span class="badge badge-national">&#127942; 国家火炬计划重点高新技术企业</span>
+                        <span class="badge badge-national">&#127942; 国家知识产权优势企业（2023年12月）</span>
+                        <span class="badge badge-national">&#127942; 中国专利优秀奖</span>
+                        <span class="badge badge-national">&#127942; 国家CNAS认可实验室（L7029）＋美国EPA能源之星实验室授权</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>省市级资质与荣誉</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-province">&#127941; 广东省省级企业技术中心（2023年12月）</span>
+                        <span class="badge badge-province">&#127941; 广东省科学技术一等奖</span>
+                        <span class="badge badge-province">&#127941; 广东省专精特新中小企业</span>
+                        <span class="badge badge-province">&#127941; 7个省级工程技术研究中心</span>
+                        <span class="badge badge-city">&#127941; 广州市市长质量奖 / 花都区区长质量奖</span>
+                        <span class="badge badge-city">&#127941; 广州市独角兽企业、隐形冠军企业（鸿利显示，2023）</span>
+                        <span class="badge badge-other">&#127941; ISO9001 / IATF16949 / ISO14001 / ISO 56005（2级）</span>
+                        <span class="badge badge-other">&#127941; 标准化良好行为企业AAAA级；AEC-Q102车规认证</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>子公司资质分布（可用于分主体申报国家级项目）</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-province">谊善车灯（江苏丹阳）：江苏省专精特新＋高新技术企业＋CNAS检测中心</span>
+                        <span class="badge badge-province">江西鸿利（南昌）：江西省专精特新（2023）＋省工程研究中心＋省企业技术中心</span>
+                        <span class="badge badge-province">鸿利显示（广州花都）：省专精特新＋省Mini LED工程技术研究中心（2024）</span>
+                        <span class="badge badge-province">斯迈得半导体（深圳）：高新技术企业（2024）＋省级专精特新</span>
+                    </div>
+                    <p style="font-size:13px;color:var(--text-light);margin-top:12px;">尚未取得国家级专精特新&#8220;小巨人&#8221;、国家级/省级绿色工厂、智能工厂梯度培育（先进级及以上）、国家级企业技术中心、制造业单项冠军、智能制造示范工厂等资质；这些资质多数是第3、5项等大额资金项目申报的加分项或前置条件，建议同步启动培育。</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="collapse-section">
+            <summary>&#128203; 近三年项目申请与投资建设情况（2024-2026）</summary>
+            <div class="collapse-body">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="year">2026年</div>
+                        <h4>中央预算内·数字经济专项（行业高质量数据集方向）</h4>
+                        <p>尚未申报。10-11月为年度征集窗口，为清单第5项，须尽快与省数据局、市发改委对接项目入库口径。 <span class="status-progress">待申报（当前窗口）</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2026年6月</div>
+                        <h4>与控股股东共同设立泸州市鸿利智汇战略创业投资基金</h4>
+                        <p>基金认缴总额不超2.99亿元，公司以自有资金认缴1.2亿元，投向LED先进封装、Mini/Micro LED、汽车照明及电子、泛半导体、精密制造。属产业投资行为，非财政奖补。 <span class="status-done">已完成董事会审议</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2026年1月 / 4月</div>
+                        <h4>鸿利智汇（泰国）有限公司设立</h4>
+                        <p>拟出资不超3750万元（鸿利香港80%、公司20%），2026年4月完成设立登记，预计年底试投产。境外投资须完成发改、商务、外汇ODI备案，不进入国内技改投资口径。 <span class="status-done">已登记设立</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2025年</div>
+                        <h4>谊善车灯制造二厂投产（江苏丹阳）</h4>
+                        <p>实现全流程智能化生产，为清单第2项（工业重点领域设备更新，江苏属地申报）的主要完工设备基础。 <span class="status-done">已投产</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2024年12月 / 全年</div>
+                        <h4>鸿利显示二期产业园投产；收购鸿利显示5%少数股权</h4>
+                        <p>二期产业园总建筑面积18.02万平方米（广州花都），2024年投产；公司以464.72万元收购南昌广恒电子所持5%股权，实现全资控股。该项目对应的设备购置发票与竣工决算资料是省、市技改申报的核心凭证。 <span class="status-done">已投产</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2023年12月</div>
+                        <h4>入选国家知识产权优势企业；认定为广东省省级企业技术中心</h4>
+                        <p>两项均为公司现有多数资金类项目申报的能力背书。 <span class="status-done">已获得</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2021年7月</div>
+                        <h4>鸿利显示获花都区住房租赁市场财政奖补1461.60万元</h4>
+                        <p>显示产业园用房相关，可作为区级财政支持与花都区政府深度绑定的历史依据。 <span class="status-done">已获批</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">关键财务口径</div>
+                        <h4>在建工程仅0.68亿元（2025年6月末）</h4>
+                        <p>主要为新型背光显示二期项目及部分在安装设备；机器设备余额约8.56亿元、房屋建筑物约8.51亿元，年折旧摊销约2亿元。该口径直接决定&#8220;在建类&#8221;亿元级专项的申报资格，是本年度最需要提前布局的短板。 <span class="status-progress">需谋划新项目</span></p>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </div>
+
+</div>
+
+<div class="footer">
+    鸿利智汇集团股份有限公司 &middot; 2026年度奖补项目申报清单 &middot; 仅供内部参考使用 &middot; 编制日期：2026-10-19
+</div>
+
+<script>
+    document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    function filterTable(level) {
+        const tableRows = document.querySelectorAll('#projectTable tbody tr');
+        tableRows.forEach(row => {
+            row.style.display = (level === 'all' || row.dataset.level === level) ? '' : 'none';
+        });
+        const mobileCards = document.querySelectorAll('#mobileCards .m-project-card');
+        mobileCards.forEach(card => {
+            card.style.display = (level === 'all' || card.dataset.level === level) ? '' : 'none';
+        });
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('.section, .collapse-group');
+        const navLinks = document.querySelectorAll('.nav a');
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 140;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    document.querySelector('.nav a[href="#company"]').addEventListener('click', function() {
+        setTimeout(() => {
+            document.querySelectorAll('.collapse-section').forEach(d => d.open = true);
+        }, 400);
+    });
+</script>
+
+</body>
+</html>
